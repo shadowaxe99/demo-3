@@ -1,0 +1,61 @@
+#israel-tribute-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+#israel-tribute-section h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#israel-tribute-section p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 800px;
+}
+
+#israel-tribute-section img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+#israel-tribute-section .tribute-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#israel-tribute-section .tribute-content .tribute-item {
+    flex: 0 0 calc(33.3333% - 20px);
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+#israel-tribute-section .tribute-content .tribute-item:hover {
+    transform: scale(1.05);
+}
+
+#israel-tribute-section .tribute-content .tribute-item h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#israel-tribute-section .tribute-content .tribute-item p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+    text-align: justify;
+}

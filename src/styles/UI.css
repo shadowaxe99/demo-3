@@ -1,0 +1,62 @@
+/* Global UI Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Animation Styles */
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes slideIn {
+    0% {transform: translateY(-100%);}
+    100% {transform: translateY(0);}
+}
+
+.slide-in {
+    animation: slideIn 1s ease-in;
+}
