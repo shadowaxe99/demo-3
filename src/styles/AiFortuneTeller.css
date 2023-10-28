@@ -1,0 +1,44 @@
+#ai-fortune-teller {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+#ai-fortune-teller h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#ai-fortune-teller .prediction-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+#ai-fortune-teller .prediction-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#ai-fortune-teller .prediction-button:hover {
+    background-color: #0056b3;
+}
+
+#ai-fortune-teller .prediction-result {
+    font-size: 1.5em;
+    color: #007BFF;
+    margin-top: 20px;
+}
