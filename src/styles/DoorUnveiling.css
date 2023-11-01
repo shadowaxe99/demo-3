@@ -1,72 +1,69 @@
-#door-unveiling {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-color: #000;
-    overflow: hidden;
+Sure, here's an example of how to divide the logic into multiple components in Next.js and React. We can have a MainComponent that includes Door, Ribbon and ProjectorScreen component:
+
+**MainComponent.js**
+
+```javascript
+import React from 'react';
+import Door from './Door';
+import Ribbon from './Ribbon';
+import ProjectorScreen from './ProjectorScreen';
+
+const MainComponent = () => {
+    return (
+        <div id="door-unveiling">
+            <Door position={"left"} />
+            <Door position={"right"} />
+            <Ribbon />
+            <ProjectorScreen />
+        </div>
+    )
 }
 
-.door {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background-color: #fff;
-    transform-origin: left;
-    animation: doorOpen 3s forwards;
+export default MainComponent;
+```
+
+**Door.js**
+
+```javascript
+import React from 'react';
+
+const Door = ({ position }) => {
+    return (
+        <div 
+            className={`door ${position === 'right'? 'last-child': ''}`} 
+        />
+    )
 }
 
-.door:last-child {
-    left: 50%;
-    transform-origin: right;
-    animation: doorOpen 3s forwards;
+export default Door;
+```
+
+**Ribbon.js**
+```javascript
+import React from 'react';
+
+const Ribbon = () => {
+    return (
+        <div className="red-ribbon" />
+    )
 }
 
-@keyframes doorOpen {
-    0% {
-        transform: scaleX(1);
-    }
-    100% {
-        transform: scaleX(0);
-    }
+export default Ribbon;
+```
+
+**ProjectorScreen.js**
+```javascript
+import React from 'react';
+
+const ProjectorScreen = () => {
+    return (
+        <div className="projector-screen" />
+    )
 }
 
-.red-ribbon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 200px;
-    height: 10px;
-    background-color: red;
-    transform: translate(-50%, -50%);
-    animation: cutRibbon 3s forwards;
-}
+export default ProjectorScreen;
+```
 
-@keyframes cutRibbon {
-    0% {
-        width: 200px;
-    }
-    100% {
-        width: 0;
-    }
-}
+This allows us to split the logic into multiple files (components) and put them together to make our application work properly. The application remains concise, intuitive, and engaging.
 
-.projector-screen {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: #fff;
-    animation: lowerScreen 3s forwards;
-}
-
-@keyframes lowerScreen {
-    0% {
-        height: 0;
-    }
-    100% {
-        height: 100vh;
-    }
-}
+Remember to reuse components whenever possible and encapsulate associated logics and styles in one component for maximum cohesiveness and clarity. The final result is a robust, flexible and maintainable code base.
