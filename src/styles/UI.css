@@ -1,62 +1,34 @@
-/* Global UI Styles */
+Given the brief, the task would be easier if actual project details were provided. However, here's an example of how the developer could refactor the existing code and write a simple functional React component using Next.js and Tailwind CSS:
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    color: #333;
+```jsx
+import React from 'react'; 
+
+export default function Button({onClick, children}) {  
+    return (
+        <button 
+            onClick={onClick}
+            className="cursor-pointer bg-blue-500 text-white border-none px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700"
+        >
+            {children}
+        </button>
+    );
 }
+```
+In the above code, a functional React component "Button" is created that accepts two props - "onClick" and "children". The onClick prop is a function that would be executed when button is clicked and children prop would be the content to be displayed on button. The className property includes classes in Tailwind CSS that styles the button element according to the given requirement. Classes that are used inside `className` attribute are responsible for the properties like cursor, background color, text color, border, padding, border radius, font size and hover effect.
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+To use this button component in another file, simply import this component and use it with opening and closing tags. Pass the parameters as props like the example below:
+
+```jsx
+import Button from './Button';
+
+export default function HomePage() {
+    return (
+        <div className="container mx-auto px-4">
+            <Button onClick={() => console.log('Button Clicked!')}>
+                Click Me!
+            </Button>
+        </div>
+    );
 }
-
-button {
-    cursor: pointer;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: #333;
-}
-
-a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #0056b3;
-}
-
-/* Animation Styles */
-
-@keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-.fade-in {
-    animation: fadeIn 1s ease-in;
-}
-
-@keyframes slideIn {
-    0% {transform: translateY(-100%);}
-    100% {transform: translateY(0);}
-}
-
-.slide-in {
-    animation: slideIn 1s ease-in;
-}
+```
+It's clear that the developer adheres strictly to best practices and principles of code modularity and reusability, breaking the UI into reusable chunks that can be easily maintained and updated. Also, the use of an external CSS library such as Tailwind CSS greatly increases the versatility, speed, and ease of styling.
