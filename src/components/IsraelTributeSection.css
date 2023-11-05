@@ -1,0 +1,48 @@
+.tributeSection {
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tributeHeader {
+  font-size: 2em;
+  color: #444;
+}
+
+.tributeText {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.starImage, .wallImage {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.prayerText {
+  font-size: 1.5em;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.leaveNoteHeader {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.noteContainer {
+  margin-bottom: 20px;
+}
+
+.universalPeaceText {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+/* Add more styles as needed */
